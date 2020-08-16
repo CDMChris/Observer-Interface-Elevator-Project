@@ -1,18 +1,23 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+
 public class Elevator {
     private int floor;
-    ArrayList<Passenger> listOfPassengers = new ArrayList<>();
+    private ArrayList<Passenger> listOfPassengers;
+
     public Elevator(int floor){
+        listOfPassengers = new ArrayList<>();
         this.floor = floor;
     }
 
     public int getFloor(){
         return this.floor;
     }
+
     public void setFloor(int floor){
         this.floor = floor;
     }
+
     public void addPassenger(){
         Scanner input = new Scanner(System.in);
         System.out.println("What is your name?");
@@ -23,8 +28,5 @@ public class Elevator {
     }
 
     public void removePassenger(){
-        for(int i = 0; i <= listOfPassengers.size(); i++){
-
-        }
     }
 }
