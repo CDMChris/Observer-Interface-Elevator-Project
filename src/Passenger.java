@@ -10,11 +10,11 @@ public class Passenger {
     }
 
     public int getDestination(){
-        return this.destination;
+        return destination;
     }
 
     public String getName(){
-        return this.name;
+        return name;
     }
 
     public void setDestination(int destination){
@@ -24,6 +24,7 @@ public class Passenger {
     public static int getPassengerCount() {
         return passengerCount;
     }
+
 }
 
 
