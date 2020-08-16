@@ -1,12 +1,19 @@
-public class Passenger {
+public class Passenger implements ElevatorObserver {
     private int destination;
     private String name;
     public static int passengerCount;
+    private Elevator mCurrentElevator;
 
-    public Passenger(int destination, String name){
+    public Passenger(int destination, String name) {
+        mCurrentElevator = null;
         this.destination = destination;
         this.name = name;
         ++passengerCount;
+
+    }
+
+    public void setCurrentElevator(Elevator e) {
+        mCurrentElevator = e;
     }
 
     public int getDestination(){
@@ -25,6 +32,14 @@ public class Passenger {
         return passengerCount;
     }
 
+    @Override
+    public boolean willBoard(Elevator e) {
+        return false;
+    }
+
+    public String toString() {
+        return name;
+    }
 }
 
 
